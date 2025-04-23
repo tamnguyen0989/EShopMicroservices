@@ -42,7 +42,6 @@ public static class DatabaseExtentions
 
     private static async Task SeedOrdersWithItemsAsync(ApplicationDbContext context)
     {
-        var test = await context.Orders.ToListAsync();
         if (!await context.Orders.AnyAsync())
         {
             await context.Orders.AddRangeAsync(InitialData.OrdersWithItems);
