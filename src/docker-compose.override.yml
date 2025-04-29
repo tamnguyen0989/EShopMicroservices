@@ -1,5 +1,3 @@
-version: '3.4'
-
 services:
   catalogdb:
     container_name: catalogdb
@@ -43,6 +41,7 @@ services:
   messagebroker:
     container_name: messagebroker
     hostname: ecommerce-mq
+    image: rabbitmq:3-management
     environment:
       - RABBITMQ_DEFAULT_USER=guest
       - RABBITMQ_DEFAULT_PASS=guest
